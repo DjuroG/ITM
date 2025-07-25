@@ -1,36 +1,4 @@
 <?php
-// provera_sigurnosti=on
-// $porez = 15
-
-// if (isset($_GET["porez"])) {
-//     // echo $_GET["porez"];
-//     echo "Ukljucili ste porez";
-// } else {
-//     echo "Niste ukljucili porez";
-// }
-
-// echo "<hr>";
-
-// $vrstaProizvoda = $_GET["vrsta_proizvoda"];
-// $cena = $_GET["cena"];
-
-// if ($vrstaProizvoda == "Hrana") {
-//     if (isset($_GET["porez"])) {
-//         $dodatak = 50;
-//         echo $cena + $dodatak + 15;
-//     } else {
-//         $dodatak = 50;
-//         echo $cena + $dodatak;
-//     }
-// } else if ($vrstaProizvoda == "Racunari") {
-//     if (isset($_GET["porez"])) {
-//         $dodatak = 350;
-//         echo $cena + $dodatak + 15;
-//     } else {
-//         $dodatak = 350;
-//         echo $cena + $dodatak;
-//     }
-// }
 
 $procenatPoreza = 15;
 
