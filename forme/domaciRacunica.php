@@ -32,9 +32,9 @@
 //     }
 // }
 
-$procenatPoreza = 15; // Or define as a constant if preferred
+$procenatPoreza = 15;
 
-$porezSadrzan = isset($_GET["ukljuciPorez"]); // Use a descriptive boolean
+$porezSadrzan = isset($_GET["ukljuciPorez"]);
 
 if ($porezSadrzan) {
     echo "Ukljucili ste porez (" . $procenatPoreza . " % procenata )";
@@ -44,7 +44,7 @@ if ($porezSadrzan) {
 
 echo "<hr>";
 
-// Ensure $cena is a number
+
 $cena = isset($_GET["cena"]) ? floatval($_GET["cena"]) : 0;
 $vrstaProizvoda = isset($_GET["vrsta_proizvoda"]) ? $_GET["vrsta_proizvoda"] : '';
 
@@ -56,13 +56,11 @@ if ($vrstaProizvoda == "Hrana") {
     $dodatak = 350;
 } else {
     echo "Nepoznata vrsta proizvoda: " . htmlspecialchars($vrstaProizvoda) . "<br>";
-    // Handle error or set dodatak to 0
 }
 
 $osnovnaCena = $cena + $dodatak;
 
 if ($porezSadrzan) {
-    // Calculate tax as 15% of the osnovnaCena
     $iznosPoreza = ($osnovnaCena * $procenatPoreza) / 100;
     $konacnaCena = $osnovnaCena + $iznosPoreza;
 } else {
